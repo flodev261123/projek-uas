@@ -7,7 +7,6 @@ $idpembelian = $_GET['idpembelian'];
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
         $nama_customer = $_POST['nama_customer'];
         $alamat = $_POST['alamat'];
         $no_hp = $_POST['no_hp'];
