@@ -15,7 +15,7 @@ if ($cekPassword == $passwordLama) {
 
     mysqli_query($koneksi,"UPDATE admin SET password = '$passwordBaru' WHERE id = '$idAdmin'");
 
-    header("Location: setting.php");
+    header("Location: setting.php?password=sukses");
             exit();
 }else {
     header("Location: setting.php?password=salah");

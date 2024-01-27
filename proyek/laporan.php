@@ -12,7 +12,7 @@ include "warifheader.php";
             <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
                 <span class="fs-4 text-info-emphasis ">Warif Corporation Report</span>
             </a>
-            <button class='btn btn-info' onclick='printInvoice()'>
+            <button class='btn btn-info btn-sm onclick='printInvoice()'>
                 <i class='fas fa-print'></i> Cetak Laporan
             </button>
         </header>
@@ -31,10 +31,10 @@ include "warifheader.php";
         if ($row["nominal"] > 0) {
         ?>
             <div id='invoiceCard'>
-                <div class="p-5 mb-4 bg-body-tertiary rounded-3 d-flex justify-content-between">
+                <div class="p-5 mb-4 bg-body-tertiary text-center  rounded-3   d-sm-flex flex-column ">
                     <div class="container-fluid py-5 ">
                         <h1 class="display-5 fw-bold text-info-emphasis ">Saldo Anda Saat Ini</h1>
-                        <p class="col-md-8 fs-3  text-info-emphasis fw-semibold "> Rp. <?php echo number_format($row["nominal"], 0, ',', '.'); ?></p>
+                        <p class="col-md-8 fs-3 text-center  text-info-emphasis fw-semibold mx-auto "> <strong>Rp. </strong><?php echo number_format($row["nominal"], 0, ',', '.'); ?></p>
                     </div>
                     <div class="container-fluid py-5">
                         <?php
@@ -42,17 +42,15 @@ include "warifheader.php";
                             $query = mysqli_query($koneksi,"SELECT SUM(total_harga) as total FROM penjualan WHERE owner = '$idAdmin' AND status_bayar = true");
                             $total = mysqli_fetch_assoc($query)["total"];
 
-                        if ($total > 0) {
-                   
-                             echo "<h1 class='display-5 fw-bold text-success '>Total Profit Anda Saat Ini</h1>";
-                           
-                             echo  "<p class='col-md-8 fs-3 text-success fw-semibold '><strong>+</strong> Rp. ". number_format($total, 0, ',', '.') ."</p>";
-                         } else {
-                        ?>
-                            <div class="container-fluid">
-                                <h1 class="display-5 fw-bold text-success ">Belum Ada Profit</h1>
-                            </div>
-                        <?php } ?>
+                            if ($total > 0) {
+                                echo "<h1 class='display-5 fw-bold text-success '>Total Profit Anda Saat Ini</h1>";
+                                echo "<p class='col-md-8 fs-3 text-success fw-semibold mx-auto '><strong>+</strong> Rp. ". number_format($total, 0, ',', '.') ."</p>";
+                            } else {
+                                echo "<div class='container-fluid'>";
+                                echo "<h1 class='display-5 fw-bold text-success '>Belum Ada Profit</h1>";
+                                echo "</div>";
+                            }
+                            ?>
                     </div>
                 </div>
 
@@ -78,7 +76,7 @@ include "warifheader.php";
 
 
             <div class="row align-items-md-stretch">
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <div class="h-100 p-5 bg-body-tertiary rounded-3">
                         <h1 class="display-6 text-info-emphasis fw-bold ">Total Unit Yang Di Miliki </h1>
                         <?php 
@@ -87,14 +85,14 @@ include "warifheader.php";
                         $idAdmin = $_SESSION["idadmin"];
                         $query = mysqli_query($koneksi,"SELECT SUM(jumlah_beli) as total FROM pembelian WHERE owner = '$idAdmin' AND klaim = true");
                         $total = mysqli_fetch_assoc($query)["total"];
-                        echo "<h1 class='display-6 fw-bold text-info-emphasis '>$total Unit</h1>";
+                        echo "<h1 class='display-6 fw-bold text-info-emphasis '>$total </h1>";
                     mysqli_close($koneksi);
 
                         ?>
                         
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mt-3 mt-md-0 ">
                     <div class="h-100 p-5 bg-body-tertiary rounded-3">
                         <h1 class="display-6  fw-bold text-success ">Total Unit Yang Terjual </h1>
                         <?php 
@@ -103,7 +101,7 @@ include "warifheader.php";
                         $idAdmin = $_SESSION["idadmin"];
                         $query = mysqli_query($koneksi,"SELECT SUM(jumlah_beli) as total FROM penjualan WHERE owner = '$idAdmin'  AND status_bayar = true");
                         $total = mysqli_fetch_assoc($query)["total"];
-                        echo "<h1 class='display-6 fw-bold text-info-emphasis '>$total Unit</h1>";
+                        echo "<h1 class='display-6 fw-bold text-succes'>$total </h1>";
                     mysqli_close($koneksi);
 
                         ?>
@@ -111,9 +109,9 @@ include "warifheader.php";
                 </div>
             </div>
 
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3 d-flex justify-content-between mt-4">
+            <div class=" mb-4 bg-body-tertiary rounded-3 d-flex justify-content-between mt-4">
                 <div class="container-fluid ">
-                    <h1 class="fw-semibol text-center text-warning">Data Transaksi</h1>
+                    <h3 class="fw-semibol text-center text-warning">Data Transaksi</h3>
                     <div class="table-responsive">
                         <table class="table align-middle table-bordered table-hover rounded mt-2">
                             <thead class="table-success ">

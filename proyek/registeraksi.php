@@ -53,7 +53,7 @@ try {
 
     mysqli_commit($koneksi);
 
-    header("Location: register.php");
+    header("Location: loginpage.php?status=sukses");
     exit();
 
 }catch(Exception $e) {

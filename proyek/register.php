@@ -117,18 +117,18 @@
 
 
     <main>
-    <form  method="post" action="registeraksi.php" enctype="multipart/form-data">
-        <div class="b-example-divider"></div>
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5 ">
-        <a href="loginpage.php"><button type="button" class="btn btn-outline-info">Kembali Ke Halaman Login</button></a>
-            <div class="row align-items-center g-lg-5 py-5">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Warif Corporation Register</h1>
-                    <p class="col-lg-10 fs-4">Daftar Untuk Akses Aplikasi, Buat Akun dan login Untuk Menikmati Fitur Aplikasi</p>
-                    <img src="../image/bg-truk3.jpg" class="img-fluid rounded " alt="...">
-                </div>
-                <div class="col-md-10 mx-auto col-lg-6">
-                    <!-- <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="registeraksi.php"> -->
+        <form method="post" action="registeraksi.php" enctype="multipart/form-data">
+            <div class="b-example-divider"></div>
+            <div class="container col-xl-10 col-xxl-8 px-4 py-5 ">
+                <a href="loginpage.php"><button type="button" class="btn btn-outline-info">Kembali Ke Halaman Login</button></a>
+                <div class="row align-items-center g-lg-5 py-5">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Warif Corporation Register</h1>
+                        <p class="col-lg-10 fs-4">Daftar Untuk Akses Aplikasi, Buat Akun dan login Untuk Menikmati Fitur Aplikasi</p>
+                        <img src="../image/bg-truk3.jpg" class="img-fluid rounded " alt="...">
+                    </div>
+                    <div class="col-md-10 mx-auto col-lg-6">
+                        <!-- <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="registeraksi.php"> -->
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" name="nama" placeholder="name@example.com" required>
                             <label for="floatingInput">Nama</label>
@@ -158,81 +158,78 @@
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="file" class="form-control" name="foto"  >
+                            <input type="file" class="form-control" name="foto">
                             <label for="floatingPassword">Upload Foto Anda</label>
                         </div>
 
                         <hr class="my-4">
                         <small class="text-body-secondary fw-semibol fs-5">Selanjut nya isi form saldo di bawah ini.</small>
 
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="b-example-divider"></div>
+            <div class="b-example-divider"></div>
 
-        <div class="bg-dark text-secondary px-4 py-5 text-center">
-            <div class="py-5">
-                <h1 class="display-5 fw-bold text-white">Buat Saldo Anda</h1>
-                <div class="col-lg-6 mx-auto">
-                    <p class="fs-5 mb-4">Saldo Akan Di Gunakan Untuk Aktivitas Dalam Sistem Kami, Penentuan Nominal Akan Di Lakukan Di Dalam Aplikasi Setelah Log In, Anda Akan Di Arahkan Untuk Top Up Saldo Oleh Sistem</p>
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="../image/SALDO.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../image/SALDO2.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../image/SALDO3.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="row mt-4 ">
-                        <div class="col">
-                            <input type="text" class="form-control" name="bank" placeholder="Nama Bank" required>
-                        </div>
-                        <div class="col">
-                            <input type="number" class="form-control" placeholder="Nomor Rekening" name="no_rekening" required>
-                        </div>
-                    </div>
-                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <button type="submit" class="btn btn-outline-info btn-lg px-4 mt-4 me-sm-3 fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buat Akun</button>
-
-                    </div>
-
-
-                    <!-- Modal -->
-                    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content  ">
-                                <div class="modal-header bg-info-subtle">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Konfirmasi Data Anda</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="bg-dark text-secondary px-4 py-5 text-center">
+                <div class="py-5">
+                    <h1 class="display-5 fw-bold text-white">Buat Saldo Anda</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="fs-5 mb-4">Saldo Akan Di Gunakan Untuk Aktivitas Dalam Sistem Kami, Penentuan Nominal Akan Di Lakukan Di Dalam Aplikasi Setelah Log In, Anda Akan Di Arahkan Untuk Top Up Saldo Oleh Sistem</p>
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../image/SALDO.jpg" class="d-block w-100" alt="...">
                                 </div>
-                                <div class="modal-body fs-6 fw-semibold ">
-                                    Apakah Anda Sudah Yakin Dengan Data Yang Anda Inputkan
+                                <div class="carousel-item">
+                                    <img src="../image/SALDO2.jpg" class="d-block w-100" alt="...">
                                 </div>
-                                <div class="modal-footer bg-info-subtle">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Urungkan</button>
-                                    <input type="submit" class="btn btn-info" value="Lanjutkan">
+                                <div class="carousel-item">
+                                    <img src="../image/SALDO3.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="row mt-4 ">
+                            <div class="col">
+                                <input type="text" class="form-control" name="bank" placeholder="Nama Bank" required>
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Nomor Rekening" name="no_rekening" required>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="button" class="btn btn-outline-info btn-lg px-4 mt-4 me-sm-3 fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buat Akun</button>
+                        </div>
+
+                        <!--modal-->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content  ">
+                                    <div class="modal-header bg-info-subtle">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Konfirmasi Data Anda</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body fs-6 fw-semibold ">
+                                        Apakah Anda Sudah Yakin Dengan Data Yang Anda Inputkan
+                                    </div>
+                                    <div class="modal-footer bg-info-subtle">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Urungkan</button>
+                                        <input type="submit" class="btn btn-info" value="Lanjutkan">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                    
+                    </div>
                 </div>
             </div>
-        </div>
 
         </form>
     </main>

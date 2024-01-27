@@ -1,7 +1,7 @@
 <?php
 
     try {
-        $koneksi = mysqli_connect("localhost","root","secret","testinguas2");
+        $koneksi = mysqli_connect("localhost","root","","testing_uas");
     }catch(Exception $e) {
         echo $e->getMessage();  
     }
